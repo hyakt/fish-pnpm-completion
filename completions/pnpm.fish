@@ -6,11 +6,6 @@ function _pnpm_completion
 
   set completions (eval env DEBUG=\"" \"" COMP_CWORD=\""$words\"" COMP_LINE=\""$cmd \"" COMP_POINT=\""$cursor\"" pnpm completion -- $cmd)
 
-  set -l matches (commandline -ct)*
-  if [ -n "$matches" ]
-      __fish_complete_path (commandline -ct)
-  end
-
   for completion in $completions
       echo -e $completion
   end
