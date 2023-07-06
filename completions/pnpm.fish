@@ -66,7 +66,7 @@ end
 complete -f -c pnpm -n __fish_pnpm_needs_command -a "(_pnpm_completion)" -d 'pnpm'
 
 # run
-for c in run-script run rum urn
+for c in run-script run
     complete -f -c pnpm -n "__fish_pnpm_using_command $c" -a "(__fish_pnpm_run)"
     complete -f -c pnpm -n "__fish_pnpm_using_command $c" -l if-present -d "Don't error on nonexistant script"
     complete -f -c pnpm -n "__fish_pnpm_using_command $c" -l ignore-scripts -d "Don't run pre-, post- and life-cycle scripts"
